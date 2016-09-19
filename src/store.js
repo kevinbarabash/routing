@@ -11,4 +11,11 @@ if (module.hot) {
     })
 }
 
+window.addEventListener('popstate', (e) => {
+    store.dispatch({
+        type: 'color', 
+        color: (e && e.state && e.state.color) || 'pink'
+    })
+})
+
 export {store as default}

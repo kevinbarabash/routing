@@ -19,6 +19,7 @@ const Layout = (props) => {
                 key={color}
                 style={{marginRight:10, fontSize: 24}}
                 onClick={(e) => {
+                    history.pushState({color}, '', `/${color}`)
                     store.dispatch({type: 'color', color})
                 }}
             >{color}</button>)}

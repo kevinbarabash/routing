@@ -12,8 +12,4 @@ const reducer = (state, action) => {
     }
 }
 
-document.addEventListener('popstate', (e) => {
-    console.log(e)
-})
-
 module.exports = reducer;
